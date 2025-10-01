@@ -1,0 +1,36 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and outputs (keep folder, ignore contents)
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Models
+*.pt
+*.pth
+*.pkl
+*.joblib
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.bbl
+report/*.blg
+report/*.synctex.gz
+report/*.toc

@@ -1,0 +1,51 @@
+\documentclass{article}
+% Uncomment the line below after adding neurips_2023.sty to this folder
+% \usepackage[preprint]{neurips_2023}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath, amssymb}
+
+\title{Retail Customer Purchase Prediction}
+
+\author{%
+  Benjamin Tran \and Matthew Nguyen \and Victor Bui \and Gustavo Buenrostro\\
+  University of Houston\\
+  \texttt{\{emails\}@uh.edu}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Briefly describe the problem, approach, and key results (<= 300 words). Primary metric: ROC-AUC; compare LR, DT/RF/(Boosting), and MLP.
+\end{abstract}
+
+\section{Introduction}
+Problem motivation, why it matters, and summary of contributions. Outline of the paper.
+% Talk about purchase intent prediction, supervised learning framing, business relevance.
+
+\section{Background / Related Work}
+Prior work on purchase intent prediction, classical ML vs shallow NNs on tabular data, evaluation metrics. Cite datasets/papers.
+
+\section{Data}
+Describe UCI Online Shoppers dataset (features, label, imbalance), preprocessing (one-hot, scaling), and split (train/val/test). If used, describe aggregation for Online Retail II (RFM). Leakage audit.
+
+\section{Methods}
+Models: Logistic Regression (baseline), Decision Tree, Random Forest, (optional) Gradient Boosting, MLP (architecture, regularization, early stopping). Class imbalance handling. Justify choices.
+
+\section{Experiments}
+Validation setup, hyperparameters (brief), metrics (ROC-AUC primary; F1/Precision/Recall). Figures: ROC curves, confusion matrices, feature importance (trees), learning curve (MLP). Ablations: feature groups, model families.
+
+\section{Results \& Discussion}
+Report main numbers on validation/test; discuss trade-offs (interpretability vs performance). Business takeaways: what signals most influence conversion.
+
+\section{Conclusion}
+Key findings, limitations, and future work (e.g., calibration, cost-sensitive thresholds, deployment thoughts).
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
