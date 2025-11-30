@@ -6,5 +6,4 @@ seaborn
 jupyterlab
 ipykernel
 torch
-# tensorflow==2.*   # (optional alternative to torch; pick one stack)
-# imbalanced-learn  # (optional if you decide to use SMOTE or similar)
+    
