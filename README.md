@@ -52,3 +52,4 @@ This repo is notebook-first and exports slide/poster-ready figures automatically
 2. Collect exported figures from `presentations/assets/`.
 3. Assemble slides, then poster, then report.  
 4. Update `REFERENCES.md` (or `references.bib`) with final citations.
+
