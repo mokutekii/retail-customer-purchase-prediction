@@ -14,9 +14,7 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Data and outputs (keep folder, ignore contents)
-data/*
-!data/.gitkeep
+# Outputs (keep folder, ignore contents)
 outputs/*
 !outputs/.gitkeep
 
