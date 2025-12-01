@@ -1,0 +1,7 @@
+{
+  "roc": "c:\\Users\\mttng\\Downloads\\retail-customer-purchase-prediction\\notebook\\outputs\\figures\\purchase_pred_roc_test.png",
+  "pr": "c:\\Users\\mttng\\Downloads\\retail-customer-purchase-prediction\\notebook\\outputs\\figures\\purchase_pred_pr_test.png",
+  "cm": "c:\\Users\\mttng\\Downloads\\retail-customer-purchase-prediction\\notebook\\outputs\\figures\\purchase_pred_cm_test.png",
+  "cal": "c:\\Users\\mttng\\Downloads\\retail-customer-purchase-prediction\\notebook\\outputs\\figures\\purchase_pred_calibration_test.png",
+  "feature_importance": "c:\\Users\\mttng\\Downloads\\retail-customer-purchase-prediction\\notebook\\outputs\\figures\\purchase_pred_feature_importance.png"
+}
