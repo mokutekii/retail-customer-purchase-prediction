@@ -1,0 +1,4 @@
+{
+  "model": "GradientBoosting",
+  "threshold": 0.325
+}

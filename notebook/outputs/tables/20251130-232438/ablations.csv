@@ -1,0 +1,4 @@
+group,roc_auc_val
+Full,0.9207906616735791
+BehavioralOnly,0.883947626270083
+TemporalTechOnly,0.7039582298699382
