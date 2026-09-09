@@ -1,28 +1,37 @@
-# OS junk
+# Operating-system files
 .DS_Store
 Thumbs.db
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+# Python environments, caches, and packaging outputs
 .venv/
 venv/
 env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.pytest_tmp/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
 
-# Jupyter
+# Notebook scratch state
 .ipynb_checkpoints/
 
-# Outputs (keep folder, ignore contents)
-outputs/*
-!outputs/.gitkeep
-
-# Models
+# Locally generated training artifacts and serialized models
+/artifacts/
+*.joblib
+*.pkl
 *.pt
 *.pth
-*.pkl
-*.joblib
+
+# Root-level generated outputs, while retaining a placeholder if one is added
+/outputs/*
+!/outputs/.gitkeep
 
 # LaTeX build artifacts
 report/*.aux

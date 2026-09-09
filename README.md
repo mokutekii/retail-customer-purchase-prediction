@@ -4,6 +4,39 @@ Pipeline to predict whether an online session results in a purchase. Aligned wit
 
 Central deliverable is a **Jupyter Notebook** that generates all plots/tables for: **slides, poster, and NeurIPS-style report**.
 
+## Reproducible training pipeline
+
+The notebooks are retained for exploration and presentation assets. Use the package entry point for a repeatable training run: it keeps the test split sealed, selects the model by cross-validation on training data, calibrates the selected model, and chooses the classification threshold on validation data only.
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+pip install -e ".[dev,notebooks]"
+python -m retail_purchase.train --fast
+pytest
+```
+
+Outputs are written to `artifacts/`:
+
+- `model.joblib` — calibrated model, selected threshold, and input-feature contract
+- `model_selection.csv` — cross-validation model selection evidence
+- `validation_thresholds.csv` — validation-only operating-point sweep
+- `metrics.json` — split sizes, configuration, and final test metrics
+
+The preprocessing explicitly one-hot encodes integer-coded labels such as `Region` and `TrafficType`, which should not be treated as ordered quantities.
+
+## Docker
+
+The Docker image runs the same CLI pipeline and includes only the primary, versioned UCI dataset. Results are bind-mounted into the local `artifacts/` directory.
+
+```bash
+docker compose run --rm train
+# Full search rather than the default smoke-test grid:
+docker compose run --rm train --cv-folds 5
+```
+
+Use `docker build --tag retail-purchase-prediction:local .` followed by `docker run --rm -v "${PWD}/artifacts:/app/artifacts" retail-purchase-prediction:local` if you prefer not to use Compose.
+
 
 ## Quick Start
 ```bash
@@ -14,7 +47,8 @@ source .venv/bin/activate
 # .venv\\Scripts\\activate
 
 pip install -r requirements.txt
-jupyter lab  # open notebooks/retail_purchase_prediction.ipynb
+jupyter lab  # open notebook/retail_purchase_prediction.ipynb
+```
 
 
 ## Data

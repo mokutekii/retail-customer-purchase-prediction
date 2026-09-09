@@ -1,0 +1,17 @@
+.git
+.venv
+.vscode
+.pytest_cache
+.ruff_cache
+__pycache__
+*.py[cod]
+*.egg-info
+artifacts
+notebook
+presentations
+report
+references
+docs
+work
+outputs
+data/online_retail_II.csv

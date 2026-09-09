@@ -1,0 +1,8 @@
+services:
+  train:
+    build:
+      context: .
+    image: retail-purchase-prediction:local
+    volumes:
+      - ./artifacts:/app/artifacts
+    command: ["--fast"]

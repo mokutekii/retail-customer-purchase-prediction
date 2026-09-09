@@ -1,0 +1,14 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "python.analysis.extraPaths": ["${workspaceFolder}/src"],
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "jupyter.interactiveWindowMode": "perFile",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.ipynb_checkpoints": true
+  },
+  "files.watcherExclude": {
+    "**/data/**": true,
+    "**/notebook/outputs/**": true
+  }
+}
